@@ -6,7 +6,7 @@
 // 
 
 const log = chrome.extension.getBackgroundPage().console.log
-const something = chrome.tabs.query({}, function (tabs) {
+const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     // tabs = [{}, {}, {}]
     const container = document.createElement('div')
     container.style.display = 'flex' // display: flex
@@ -19,6 +19,8 @@ const something = chrome.tabs.query({}, function (tabs) {
         el.style.height = '100px'
         el.style.backgroundColor = 'red'
         el.style.margin = '2px'
+        el.className += "tabBox"
+        el.id = tab.id
         container.appendChild(el)
     })
 
@@ -27,4 +29,12 @@ const something = chrome.tabs.query({}, function (tabs) {
 
     // htmlArray = ['<h1>...', '<h1>...', '<h1>...', ...]
     log(tabs)
+    
+    element.addEventListener("click", changeTab);
+
+    function changeTab() {
+        chrome.windows.update(integer windowId, object updateInfo, function callback)
+    }
 });
+
+// 
