@@ -21,20 +21,31 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         el.style.margin = '2px'
         el.className += "tabBox"
         el.id = tab.id
+        // el.addEventListener("click", function () {console.log(el.id)});
+        
         container.appendChild(el)
     })
 
     // TODO: Display this in the extension DOM
     document.querySelector('body').appendChild(container)
-
+    const tabBoxId = document.querySelectorAll(".tabBox").forEach( (tabBox)=> {
+        tabBox.addEventListener("click", function () {
+            log(tabBox.id)
+            chrome.tabs.update(tabBox.id, {active: true})
+        });
+    } )
+    
     // htmlArray = ['<h1>...', '<h1>...', '<h1>...', ...]
     log(tabs)
     
-    element.addEventListener("click", changeTab);
+    
+    function changeTab(id) {
+        console.log(id)
+        chrome.tabs.update(id, { highlighted: true })
 
-    function changeTab() {
-        chrome.windows.update(integer windowId, object updateInfo, function callback)
     }
+
+    
 });
 
 // 
