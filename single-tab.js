@@ -1,10 +1,3 @@
-// chrome.tabs.getAllInWindow(null, function (tabs) {
-//     for (var i = 0; i < tabs.length; i++) {
-//         chrome.tabs.sendRequest(tabs[i].id, { action: "xxx" });
-//     }
-// });
-// 
-
 const log = chrome.extension.getBackgroundPage().console.log
 const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     // tabs = [{}, {}, {}]
@@ -19,6 +12,17 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         el.style.height = '100px'
         el.style.backgroundColor = '#42f4b6'
         el.style.margin = '2px'
+        
+        // ICON
+        var img = document.createElement("img");
+        img.src = tab.favIconUrl
+        el.appendChild(img)
+
+        // TITLE
+        var tabTitle = document.createElement("h5")
+        tabTitle.innerHTML = tab.title
+        el.appendChild(tabTitle)
+
         el.className += "tabBox"
         el.id = tab.id
         // el.addEventListener("click", function () {console.log(el.id)});
