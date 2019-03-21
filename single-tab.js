@@ -15,9 +15,9 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
 
     const elArray = tabs.forEach((tab) => {
         const el = document.createElement('div')
-        el.style.width = '100px' // width: 100px
+        el.style.width = '30%' // width: 100px
         el.style.height = '100px'
-        el.style.backgroundColor = 'red'
+        el.style.backgroundColor = '#42f4b6'
         el.style.margin = '2px'
         el.className += "tabBox"
         el.id = tab.id
@@ -31,7 +31,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     const tabBoxId = document.querySelectorAll(".tabBox").forEach( (tabBox)=> {
         tabBox.addEventListener("click", function () {
             log(tabBox.id)
-            chrome.tabs.update(tabBox.id, {active: true})
+            chrome.tabs.update(Number(tabBox.id), { active: true})
         });
     } )
     
@@ -39,11 +39,11 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     log(tabs)
     
     
-    function changeTab(id) {
-        console.log(id)
-        chrome.tabs.update(id, { highlighted: true })
+    // function changeTab(id) {
+    //     console.log(id)
+    //     chrome.tabs.update(id, { highlighted: true });
 
-    }
+    // }
 
     
 });
