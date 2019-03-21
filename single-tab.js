@@ -1,6 +1,6 @@
 const log = chrome.extension.getBackgroundPage().console.log
 const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
-    // tabs = [{}, {}, {}]
+
     const container = document.createElement('div')
     container.style.display = 'flex' // display: flex
     container.style.justifyContent = 'flex-start'
@@ -38,18 +38,11 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
             chrome.tabs.update(Number(tabBox.id), { active: true})
         });
     } )
-    
-    // htmlArray = ['<h1>...', '<h1>...', '<h1>...', ...]
+
     log(tabs)
     
-    
-    // function changeTab(id) {
-    //     console.log(id)
-    //     chrome.tabs.update(id, { highlighted: true });
-
-    // }
+   
 
     
 });
 
-// 
