@@ -16,6 +16,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         // ICON
         var img = document.createElement("img");
         img.src = tab.favIconUrl
+        img.style.height = "70px"
         el.appendChild(img)
 
         // TITLE
