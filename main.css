@@ -1,9 +1,21 @@
 body {
-    width: 900px;
+    width: 800px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
-.tabBox {
-    width: 30%;
 
+
+.tabBox {
+    display: flex;
+    width: 70px;
+    height: 100px;
+    background-color: #42f4b6;
+    margin: auto;
+
+}
+
+.tabBox > h3 {
+    margin: 10px;
+    text-overflow: ellipsis;
 }
