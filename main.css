@@ -8,10 +8,10 @@ body {
 
 .tabBox {
     display: flex;
-    width: 70px;
+    /* width: 100px;
     height: 100px;
     background-color: #42f4b6;
-    margin: auto;
+    margin: auto; */
 
 }
 
