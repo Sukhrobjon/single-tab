@@ -7,9 +7,12 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     container.style.flexWrap = 'wrap'
     container.className = "box-container"
 
+    // creating each box and adding the properties
     const elArray = tabs.forEach((tab) => {
+        
+        // parent div for element
         const el = document.createElement('div')
-        el.style.width = '30%' // width: 100px
+        el.style.width = '30%' 
         el.style.height = '100px'
         el.style.backgroundColor = '#42f4b6'
         el.style.margin = '2px'
@@ -28,7 +31,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         // TITLE
         var tabTitle = document.createElement("h3")
         tabTitle.innerHTML = tab.title
-        
+
         el.appendChild(tabTitle)
 
         el.className += "tabBox"
