@@ -19,7 +19,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         
         // ICON
         const imgBox = document.createElement('div')
-        imgBox.style.border = '2px solid #000'
+        // imgBox.style.border = '2px solid #000'
         imgBox.style.justifyContent = "center"
 
         var img = document.createElement("img");
