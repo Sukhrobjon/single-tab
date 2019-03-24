@@ -7,7 +7,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     container.style.flexWrap = 'wrap'
     container.className = "box-container"
 
-    numberOfTabs = 0
+    
     // creating each box and adding its properties
     const elArray = tabs.forEach((tab) => {
         
@@ -41,7 +41,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         // el.addEventListener("click", function () {console.log(el.id)});
         
         container.appendChild(el)
-        numberOfTabs += 1
+        
 
     })
 
@@ -56,9 +56,9 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
 
     log(tabs)
     
-    log("tab length: " + tabs.length)
-
-
+    
+    var numberOfTabs = tabs.length
+    log("tab length: " + numberOfTabs)
     document.getElementById("numberOfTabs").innerHTML = tabs.length
 });
 
