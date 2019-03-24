@@ -7,7 +7,8 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     container.style.flexWrap = 'wrap'
     container.className = "box-container"
 
-    // creating each box and adding the properties
+    numberOfTabs = 0
+    // creating each box and adding its properties
     const elArray = tabs.forEach((tab) => {
         
         // parent div for element
@@ -19,11 +20,11 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         
         // ICON
         const imgBox = document.createElement('div')
-        // imgBox.style.border = '2px solid #000'
         imgBox.style.justifyContent = "center"
-
+        
         var img = document.createElement("img");
         img.src = tab.favIconUrl
+        
         img.style.height = "40px"
         imgBox.appendChild(img)
         el.appendChild(imgBox)
@@ -36,9 +37,12 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
 
         el.className += "tabBox"
         el.id = tab.id
+        el.tabIndex = tab.index
         // el.addEventListener("click", function () {console.log(el.id)});
         
         container.appendChild(el)
+        numberOfTabs += 1
+
     })
 
     // TODO: Display this in the extension DOM
@@ -52,8 +56,9 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
 
     log(tabs)
     
-   
+    log("tab length: " + tabs.length)
 
-    
+
+    document.getElementById("numberOfTabs").innerHTML = tabs.length
 });
 
