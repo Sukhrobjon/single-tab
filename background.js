@@ -8,7 +8,7 @@ const numberOftabs = chrome.tabs.query({ currentWindow: true}, function (tabs) {
     });
 })
 chrome.browserAction.setBadgeBackgroundColor({
-    color: [50, 0, 0, 50]
+    color: [10, 20, 0, 10]
 });
 
 console.log('numberOftabs -- ')

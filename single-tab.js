@@ -18,6 +18,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         el.style.backgroundColor = '#42f4b6'
         el.style.margin = '2px'
         
+        
         // ICON
         const imgBox = document.createElement('div')
         imgBox.style.justifyContent = "center"
@@ -59,6 +60,6 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     
     var numberOfTabs = tabs.length
     console.log("tab length: " + numberOfTabs)
-    document.getElementById("numberOfTabs").innerHTML = tabs.length
+    // document.getElementById("numberOfTabs").innerHTML = tabs.length
 });
 
