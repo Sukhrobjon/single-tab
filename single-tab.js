@@ -15,7 +15,6 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         const el = document.createElement('div')
         el.style.width = '30%' 
         el.style.height = '100px'
-        el.style.backgroundColor = '#42f4b6'
         el.style.margin = '2px'
         
         
