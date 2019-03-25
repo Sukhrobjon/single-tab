@@ -1,4 +1,4 @@
-const log = chrome.extension.getBackgroundPage().console.log
+// const log = chrome.extension.getBackgroundPage().console.log
 const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
 
     const container = document.createElement('div')
@@ -49,16 +49,16 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
     document.querySelector('body').appendChild(container)
     const tabBoxId = document.querySelectorAll(".tabBox").forEach( (tabBox)=> {
         tabBox.addEventListener("click", function () {
-            log(tabBox.id)
+            console.log(tabBox.id)
             chrome.tabs.update(Number(tabBox.id), { active: true})
         });
     } )
 
-    log(tabs)
+    console.log(tabs)
     
     
     var numberOfTabs = tabs.length
-    log("tab length: " + numberOfTabs)
+    console.log("tab length: " + numberOfTabs)
     document.getElementById("numberOfTabs").innerHTML = tabs.length
 });
 
