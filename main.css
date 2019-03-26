@@ -8,9 +8,9 @@ body {
 
 .tabBox {
     display: flex;
-    border: 2px solid grey;
+    border: 2px solid #ececec;
     border-radius: 5px;
-    background-color: #c5c5c5;
+    background-color: #42f4b6;
    
 
 }
