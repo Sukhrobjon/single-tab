@@ -14,7 +14,7 @@ const something = chrome.tabs.query({currentWindow: true}, function (tabs) {
         // parent div for element
         const el = document.createElement('div')
         el.style.width = '30%' 
-        el.style.height = '100px'
+        el.style.height = '100px' 
         el.style.margin = '2px'
         
         
