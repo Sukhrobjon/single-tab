@@ -1,7 +1,7 @@
 {
     "name": "Single Tab",
     "description": "Base Level Extension",
-    "version": "1.0.0",
+    "version": "1.0",
     "manifest_version": 2,
 
     "permissions": [
@@ -10,7 +10,10 @@
     ],
     "browser_action": {
         "default_popup": "popup.html",
-        "default_icon": "stack-icon.png"
+        "default_icon": "assets/icon_48.png"
+    },
+    "icons": {
+        "128": "assets/icon_128.png"
     },
     "commands": {
         "_execute_browser_action": {
