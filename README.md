@@ -4,7 +4,12 @@ One Tab - Go back to your open tabs in a second. Ypu dont have to spend to switc
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To use the extension locally run
+```
+git clone https://github.com/Sukhrobjon/single-tab.git
+```
+And follow the Chrome developer [instruction](https://developer.chrome.com/extensions/getstarted) to add the extension 
+and use it locally
 
 ### Prerequisites
 
