@@ -1,6 +1,6 @@
 # Project Title
 
-One Tab - Go back to your open tabs in a second. Ypu dont have to spend to switching them without knowing which one is which
+One Tab - Go back to your open tabs in a second. You dont have to spend to switching them without knowing which one is which
 
 ## Getting Started
 
